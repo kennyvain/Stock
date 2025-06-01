@@ -29,6 +29,9 @@ import ReportsMenu from './components/reports/ReportsMenu';
 import DailyStockOutReport from './components/reports/DailyStockOutReport';
 import StockStatusReport from './components/reports/StockStatusReport';
 
+// 404 Page
+import NotFound from './components/NotFound';
+
 const App = () => {
   return (
     <AuthProvider>
@@ -63,7 +66,7 @@ const App = () => {
           </Route>
 
           {/* Fallback */}
-          <Route path="*" element={<Navigate to="/dashboard" replace />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>
